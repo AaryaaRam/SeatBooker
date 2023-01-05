@@ -1,0 +1,40 @@
+<%- include("header") -%>
+ 
+    <div class="container" style="margin-top: 5rem ;">
+        <h1>Book Tickets</h1>
+    </div>
+    <div class="p-5 mb-4 bg-light rounded-3" style="
+    background-color: #00008B!important;
+">
+
+
+
+        <% for(var i=0;i<display.length;i++){ %>
+            <div class="col-md-6 my-2" style="margin:auto;">
+                <div class="h-100 p-5 bg-light border rounded-3" style="
+                background-color: lightgoldenrodyellow!important;height: 12rem!important;
+
+            ">
+                    <h2 class="text-center"><b>
+                            <%= display[i].teama %> v <%= display[i].teamb %>
+                        </b></h2>
+                    <h3><b>
+                            <%= display[i].date %>
+                        </b></h3>
+                    <h3 style="display: inline;">
+                        <%= display[i].time %>
+                    </h3>
+                    <form action="/booktickets/<%=display[i].matchid%>" method="get" style="display: inline;">
+                    <button class="btn btn-danger btn-lg" style="bottom: 3.50rem;left: 23.25rem;position: relative;" type="submit" >Buy Tickets</button>
+                </form>
+                </div>
+            </div>
+            <% } %>
+
+            
+    </div>
+    <%- include("footer") -%>
+
+
+
+    

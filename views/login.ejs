@@ -1,0 +1,32 @@
+<%- include("header") -%>
+  
+<!-- Custom styles for this template -->
+<link href="/css/signup.css" rel="stylesheet">
+</head>
+<body class="text-center">
+
+<main class="form-signin w-100 m-auto">
+<form action="/login" method="post">
+<img class="mb-4" src="images/Logo.png" alt="Logo" width="160" height="90">
+<h1 class="h3 mb-3 fw-normal">Login</h1>
+
+<div class="form-floating">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" required>
+  <label for="floatingInput">Email address</label>
+</div>
+<div class="form-floating">
+  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required>
+  <label for="floatingPassword">Password</label>
+</div>
+
+<!-- <div class="checkbox mb-3">
+  <label>
+    <input type="checkbox" id="checkme" onclick="myfun()"> I Agree to the terms and conditions
+  </label>
+</div> -->
+<button class="w-100 btn btn-lg btn-primary" type="submit"  id="buttonme">Login</button>
+<p class="mt-5 mb-3 text-muted">&copy; 2021-2025</p>
+</form>
+</main>
+</body>
+</html>

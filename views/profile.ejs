@@ -1,0 +1,59 @@
+<%- include("header") -%>
+
+    <style>
+        sidebar li{
+            margin-top:5vh;
+        }
+    </style>
+
+    <link href="/css/sidebars.css" rel="stylesheet">
+    <div style=" background-color: black; width:14vw; height:100vh; display:inline-block;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <svg class="bi pe-none me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4">Sidebar</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item" style="margin-top:7vh; margin-bottom:-0.5rem">
+                <a href="/profile" class="nav-link active" aria-current="page">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <use xlink:href="#home"></use>
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li class="nav-item" style="margin-top:7vh; margin-bottom:-0.5rem">
+                <a href="/booktickets" class="nav-link active" aria-current="page">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <use xlink:href="#home"></use>
+                    </svg>
+                    Book
+                </a>
+            </li>
+            <li class="nav-item" style="margin-top:7vh; margin-bottom:-0.5rem">
+                <a href="#" class="nav-link active" aria-current="page">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <use xlink:href="#home"></use>
+                    </svg>
+                    Orders
+                </a>
+            </li>
+            
+            
+        </ul>
+        <hr>
+        
+        
+ </div>
+
+ <div style="display: inline-block; position: relative; left:29vw;">
+<img src="images/profile.png" alt=""><br>
+<div style="width:20vw; display:inline-block; text-align:center; margin:auto;">
+    <%=username%>
+</div>
+</div>
+
+   
+    <script src="/js/sidebars.js"></script>

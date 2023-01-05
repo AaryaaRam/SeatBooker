@@ -1,0 +1,63 @@
+<%- include("header") -%>
+    <!-- <h1 class="display-5 fw-bold">Centered hero</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+      </div>
+    </div>
+  </div> -->
+    <div class="px-4 pt-5 my-5 text-center border-bottom" style="
+    background-color: cornsilk;
+">
+        <div class="overflow-hidden">
+            <div class="container px-5">
+                <img src="/images/<%=display.matchid%>.png" class="img-fluid border rounded-3 shadow-lg mb-4"
+                    alt="Example image" style="width:700px ;height:275px" loading="lazy">
+            </div>
+        </div>
+        <h1 class="display-4 fw-bold">
+            <%=display.teama%> v <%=display.teamb%>
+        </h1>
+        <div class="col-lg-6 mx-auto">
+            <h2><b>
+                    <%=display.date%>
+                </b></h2>
+            <h2>
+                <%=display.time%>
+            </h2>
+            <h2><b>
+                    <%=display.stadium_name%>
+                </b></h2>
+            <h2>
+                <%=display.city%>, <%=display.country%>
+            </h2>
+            <h5 id="temp">Number of seats left: <%=numofseats%></h5>
+            <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+            </div> -->
+        </div>
+    </div>
+    <div class="container">
+
+
+    <form action="/checkout/<%=display.matchid%>" method="post">
+        
+        <div class="order" >
+            <h3>Username: <br><%=username%></h3>
+        </div>
+        <div class="order col-xs-3 w-25">
+                <label class="form-label"><h4>Number of seats you want to book:</h4></label>
+                <input type="number" class="form-control" name="numofseatsbuy" required min="1" max="<%=numofseats %>">
+        </div>
+        <button class="btn btn-primary m-3"  type="submit">Proceed to Checkout</button>
+
+    </form>
+</div>
+    <!-- <hr class="featurette-divider" style="position:bottom ;"> -->
+<script>
+    
+</script>
+    <%- include("footer") -%>
